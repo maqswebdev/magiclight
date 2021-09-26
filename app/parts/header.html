@@ -4,7 +4,9 @@
 <head>
 
 	<meta charset="utf-8">
-	<title><!--#echo var="title" --></title>
+	<title>
+		<!--#echo var="title" -->
+	</title>
 	<meta name="description" content="Startup HTML template OptimizedHTML 5">
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="images/dist/favicon.png">
@@ -14,3 +16,62 @@
 </head>
 
 <body>
+
+	<header class="header">
+		<div class="container d-flex justify-content-between align-items-center">
+			<div class="header__left">
+				<a href="/" class="logotype">
+					<picture>
+						<source srcset="images/dist/logotype.webp" type="image/webp">
+						<img src="images/dist/logotype.png" alt="Logotype">
+					</picture>
+				</a>
+			</div>
+			<div class="header__right">
+				<ul class="main-nav">
+					<li class="main-nav__item">
+						<a href="#" class="link main-nav__link">Главная</a>
+					</li>
+					<li class="main-nav__item has-child">
+						<a href="#" class="link main-nav__link">О нас</a>
+						<ul class="sub-menu">
+							<li><a href="#" class="link">О компании</a></li>
+							<li><a href="#" class="link">Наша команда</a></li>
+							<li><a href="#" class="link">Отзывы</a></li>
+							<li><a href="#" class="link">Гарантия безопасности</a></li>
+							<li><a href="#" class="link">Видео галерея</a></li>
+							<li><a href="#" class="link">Контакты</a></li>
+						</ul>
+					</li>
+					<li class="main-nav__item">
+						<a href="#" class="link main-nav__link">Схема работ</a>
+					</li>
+					<li class="main-nav__item has-child">
+						<a href="#" class="link main-nav__link">Портфолио</a>
+						<ul class="sub-menu">
+							<li><a href="#" class="link">Подсветка жилых помещений</a></li>
+							<li><a href="#" class="link">Подсветка коммерческих и муниципальных объектов</a></li>
+							<li><a href="#" class="link">Ландшафтное освещение</a></li>
+						</ul>
+					</li>
+					<li class="main-nav__item">
+						<a href="#" class="link main-nav__link">Тарифы</a>
+					</li>
+					<li class="main-nav__item has-child">
+						<a href="#" class="link main-nav__link">Каркасные фигуры</a>
+						<ul class="sub-menu">
+							<li><a href="#" class="link">Световые арки и фотозоны</a></li>
+							<li><a href="#" class="link">Объемные световые фигуры 3D</a></li>
+							<li><a href="#" class="link">Консоли / перетяжки, световые надписи</a></li>
+							<li><a href="#" class="link">Световые фигуры 2D</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div class="contacts">
+					<a href="tel:+74954092520" class="phone">+7 (495) 409-02-90</a>
+					<a href="#" class="callback-link">Обратный звонок</a>
+				</div>
+			</div>
+
+		</div>
+	</header>

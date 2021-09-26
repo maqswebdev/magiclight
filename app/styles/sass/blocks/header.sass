@@ -1,0 +1,110 @@
+.header
+  position: relative
+  background: $red
+  padding: 10px 0
+  &__left
+  &__right
+    display: flex
+    align-items: center
+    .contacts
+      margin-left: 50px
+      margin-top: -15px
+// logotype
+.logotype
+  display: block
+  max-width: 234px
+  outline: none
+  img
+    max-width: 100%
+    height: auto
+// main nav
+.main-nav
+  position: relative
+  margin: 0
+  padding: 0
+  list-style: none
+  display: flex
+  &__item
+    position: relative
+    margin: 0 14px
+    &.has-child
+      &::after
+        content: ""
+        position: absolute
+        top: 50%
+        right: -20px
+        transform: translateY(-60%)
+        width: 16px
+        height: 14px
+        background-image: url(../images/dist/icons/arrow-down.svg)
+        background-size: cover
+        background-repeat: no-repeat
+    &.active .sub-menu
+      opacity: 1
+      visibility: visible
+  &__link
+    display: inline-block
+    color: $white
+    font-weight: 500
+    font-size: 15px
+    &:hover
+      color: $white
+      text-decoration: none
+// sub-menu
+.sub-menu
+  position: absolute
+  top: 120%
+  left: 0
+  margin: 0
+  padding: 0
+  list-style: none
+  background: $white
+  z-index: 3
+  width: calc( 100% + 150px)
+  height: auto
+  opacity: 0
+  visibility: hidden
+  transition: $trs
+  &.active
+    opacity: 1
+    visibility: visible
+  li
+    &:last-child
+      a
+        border-bottom: none
+    a
+      display: block
+      border-bottom: 1px solid $red
+      color: $red
+      font-weight: 500
+      padding: 7px 15px
+      &:hover
+        text-decoration: none
+        background: $red
+        color: $white
+
+// contacts
+.contacts
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  .phone
+    display: inline-block
+    color: $white
+    font-weight: 500
+    font-size: 25px
+    &:hover
+      text-decoration: none
+// callback-link
+.callback-link
+  display: inline-block
+  font-size: 14px
+  border: 2px solid $white
+  border-radius: 15px
+  padding: 2px 23px
+  color: $white
+  font-weight: 500
+  &:hover
+    text-decoration: none
+    color: $white
