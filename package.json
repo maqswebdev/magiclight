@@ -34,5 +34,8 @@
 		"jquery": "^3.5.1",
 		"magnific-popup": "^1.1.0",
 		"webpack-stream": "^6.1.1"
+	},
+	"dependencies": {
+		"hamburgers": "^1.1.3"
 	}
 }
