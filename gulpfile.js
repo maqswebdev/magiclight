@@ -105,6 +105,7 @@ function buildcopy() {
       "!app/images/src/**/*",
       "app/fonts/**/*",
       "app/js/vendor/**/*",
+      "app/video/**/*",
     ],
     { base: "app/" }
   ).pipe(dest("dist"));
