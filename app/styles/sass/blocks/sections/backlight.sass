@@ -67,6 +67,7 @@
     height: 300px
     border-radius: 15px
     overflow: hidden
+    transition: $trs
     +media-breakpoint-down(lg)
       height: 400px
     +media-breakpoint-down(md)
@@ -90,6 +91,7 @@
       height: 100%
       object-fit: cover
       border-radius: 15px
+      transition: $trs
     &__text
       position: absolute
       top: 50%
@@ -120,6 +122,22 @@
         height: 5px
         width: 95px
         background: $pink
+    &.loading
+      &::after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: $white
+        z-index: 11
+        background-image: url(../images/dist/loading.svg)
+        background-repeat: no-repeat
+        background-size: 50px 50px
+        background-position: center center
+      img
+        opacity: 0
 
 @media screen and ( max-width: 480px )
   .backlight-item
