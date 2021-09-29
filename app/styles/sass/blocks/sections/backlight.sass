@@ -52,6 +52,7 @@
     position: relative
     display: grid
     grid-template-columns: repeat(5, 1fr)
+    grid-gap: 10px
     flex-wrap: wrap
     margin-top: 47px
     +media-breakpoint-down(lg)
@@ -60,11 +61,10 @@
       grid-template-columns: repeat(2, 1fr)
     +media-breakpoint-down(xs)
       margin-top: 40px
+      grid-gap: 5px
   &-item
     position: relative
     height: 300px
-    margin-right: 10px
-    margin-bottom: 10px
     border-radius: 15px
     overflow: hidden
     +media-breakpoint-down(lg)
@@ -73,21 +73,6 @@
       height: 300px
     +media-breakpoint-down(sm)
       height: 340px
-    +media-breakpoint-down(xs)
-      margin-right: 5px
-      margin-bottom: 5px
-    &:nth-child(even)
-      +media-breakpoint-down(sm)
-        margin-right: 0
-    &:nth-child(3n)
-      +media-breakpoint-down(lg)
-        margin-right: 0
-      +media-breakpoint-down(sm)
-        margin-right: 10px
-    &:nth-child(5n)
-      margin-right: 0
-      +media-breakpoint-down(lg)
-        margin-right: 10px
     &::after
       content: ""
       position: absolute
