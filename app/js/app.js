@@ -129,6 +129,11 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleMainNav($burgerBtn);
   toggleMainNav($mainNavClose, "close");
 
+  // Jquery Functions
+  $(window).on("load", function () {
+    $(".preloader").delay(700).fadeOut("slow");
+  });
+
   $(".main-nav__item.has-child").on("mouseenter", function () {
     setTimeout(() => {
       $(".main-nav__item")
