@@ -1,4 +1,40 @@
 h1.title
+  display: inline-block
+  position: relative
+  font-size: 50px
+  font-weight: 900
+  margin: 0
+  +media-breakpoint-down(lg)
+    font-size: 42px
+  +media-breakpoint-down(md)
+    font-size: 32px
+  +media-breakpoint-down(sm)
+    font-size: 28px
+  +media-breakpoint-down(xs)
+    font-size: 24px
+  &::after
+    content: attr(data-text)
+    position: absolute
+    bottom: -20px
+    left: 50%
+    transform: translateX(-50%)
+    font-size: 100px
+    font-weight: 900
+    color: $pink
+    opacity: 0.1
+    white-space: nowrap
+    +media-breakpoint-down(lg)
+      font-size: 94px
+    +media-breakpoint-down(md)
+      font-size: 76px
+    +media-breakpoint-down(sm)
+      font-size: 68px
+    +media-breakpoint-down(xs)
+      font-size: 52px
+      bottom: -12px
+
+h2.title
+  position: relative
   font-size: 40px
   font-weight: 700
   +media-breakpoint-down(lg)
