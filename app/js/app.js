@@ -134,6 +134,14 @@ document.addEventListener("DOMContentLoaded", () => {
   //   $(".preloader").delay(700).fadeOut("slow");
   // });
 
+  $("a[data-modal]").click(function (event) {
+    $(this).modal({
+      showClose: false,
+      fadeDuration: 300,
+    });
+    return false;
+  });
+
   $(".main-nav__item.has-child").on("mouseenter", function () {
     setTimeout(() => {
       $(".main-nav__item")

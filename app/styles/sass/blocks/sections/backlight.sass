@@ -74,6 +74,7 @@
       height: 220px
     +media-breakpoint-down(xs)
       height: 300px
+      border-radius: 10px
     &::after
       content: ""
       position: absolute
@@ -91,6 +92,8 @@
       height: 100%
       object-fit: cover
       border-radius: 15px
+      +media-breakpoint-down(xs)
+        border-radius: 10px
     &__text
       position: absolute
       top: 50%
@@ -153,7 +156,7 @@
     font-weight: 700
 @media screen and ( max-width: 380px )
   .backlight-item
-    height: 240px
+    height: 220px
 @media screen and ( max-width: 320px )
   .backlight-item
     height: 200px
