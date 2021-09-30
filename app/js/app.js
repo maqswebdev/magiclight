@@ -137,7 +137,8 @@ document.addEventListener("DOMContentLoaded", () => {
   $("a[data-modal]").click(function (event) {
     $(this).modal({
       showClose: false,
-      fadeDuration: 300,
+      fadeDelay: 1,
+      fadeDuration: 200,
     });
     return false;
   });
