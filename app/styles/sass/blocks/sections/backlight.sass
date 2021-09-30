@@ -56,10 +56,11 @@
     flex-wrap: wrap
     margin-top: 47px
     +media-breakpoint-down(lg)
+      grid-template-columns: repeat(4, 1fr)
+    +media-breakpoint-down(md)
       grid-template-columns: repeat(3, 1fr)
-    +media-breakpoint-down(sm)
-      grid-template-columns: repeat(2, 1fr)
     +media-breakpoint-down(xs)
+      grid-template-columns: repeat(2, 1fr)
       margin-top: 40px
       grid-gap: 5px
   &-item
@@ -67,13 +68,12 @@
     height: 300px
     border-radius: 15px
     overflow: hidden
-    transition: $trs
-    +media-breakpoint-down(lg)
-      height: 400px
     +media-breakpoint-down(md)
       height: 300px
     +media-breakpoint-down(sm)
-      height: 340px
+      height: 220px
+    +media-breakpoint-down(xs)
+      height: 300px
     &::after
       content: ""
       position: absolute
@@ -81,7 +81,7 @@
       left: 0
       width: 100%
       height: 100%
-      background: linear-gradient(to top, rgba(32,18,63,1) -10%, rgba(32,18,63,0.5189426112241772) 50%)
+      background: linear-gradient(to top, rgba(32,18,63,1) -20%, rgba(32,18,63,0.5189426112241772) 40%)
     img
       position: absolute
       top: 0
@@ -91,7 +91,6 @@
       height: 100%
       object-fit: cover
       border-radius: 15px
-      transition: $trs
     &__text
       position: absolute
       top: 50%
@@ -112,9 +111,11 @@
       font-weight: 900
       color: $white
       text-align: left
-      +media-breakpoint-down(xs)
+      +media-breakpoint-down(lg)
         font-size: 18px
         padding-right: 10px
+      +media-breakpoint-down(sm)
+        font-size: 15px
       &::after
         content: ""
         position: absolute

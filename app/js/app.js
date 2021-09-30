@@ -130,9 +130,9 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleMainNav($mainNavClose, "close");
 
   // Jquery Functions
-  $(window).on("load", function () {
-    $(".preloader").delay(700).fadeOut("slow");
-  });
+  // $(window).on("load", function () {
+  //   $(".preloader").delay(700).fadeOut("slow");
+  // });
 
   $(".main-nav__item.has-child").on("mouseenter", function () {
     setTimeout(() => {
