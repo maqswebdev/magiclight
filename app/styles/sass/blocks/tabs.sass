@@ -7,6 +7,8 @@
   background: #f9f9f9
   border-top-left-radius: 20px
   border-top-right-radius: 20px
+  +media-breakpoint-down(lg)
+    flex-wrap: wrap
   &__item
     flex: 1
     a
@@ -18,6 +20,13 @@
       text-align: left
       white-space: nowrap
       padding: 16px 9px 9px
+      +media-breakpoint-down(lg)
+        text-align: center
+        padding: 10px 7px 7px
+        font-size: 14px
+      +media-breakpoint-down(md)
+        font-size: 12px
+        padding: 7px 5px 5px
       &[aria-selected="true"]
         background: $textcolor
         color: $white
@@ -39,14 +48,27 @@
     border-bottom-right-radius: 20px
     & > div
       height: 100%
+    .btn
+      margin-top: 15px
+      padding: 12px 0 13px
+      +media-breakpoint-down(lg)
+        margin: 15px auto 0
+      +media-breakpoint-down(sm)
+        padding: 15px 0
+      +media-breakpoint-down(xs)
+        padding: 12px 0 14px
     .video
       position: relative
       display: flex
+      +media-breakpoint-down(lg)
+        flex-direction: column
       &__cover
         display: block
         position: relative
         flex: 0 0 290px
         height: 100%
+        +media-breakpoint-down(md)
+          flex: 1
         &.loading
           &::after
             content: ""
@@ -71,6 +93,10 @@
           object-fit: cover
           border-top-left-radius: 20px
           border-bottom-left-radius: 20px
+          +media-breakpoint-down(lg)
+            border-radius: 0
+          +media-breakpoint-down(md)
+            min-height: 200px
       &__content
         position: relative
         width: 100%
@@ -79,14 +105,19 @@
         display: flex
         flex-direction: column
         justify-content: space-between
+        +media-breakpoint-down(lg)
+          padding: 20px 15px
         .title
           text-align: left
           line-height: 1.2
           margin-bottom: 15px
-        .btn
-          margin-top: 15px
-          padding: 12px 0 13px
         .text
           min-height: 170px
           max-height: 170px
           overflow: hidden
+          +media-breakpoint-down(lg)
+            min-height: 125px
+            max-height: 125px
+          +media-breakpoint-down(sm)
+            min-height: auto
+            max-height: 100%

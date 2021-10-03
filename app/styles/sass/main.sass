@@ -125,6 +125,10 @@
   position: relative
   width: 100%
   height: 445px
+  +media-breakpoint-down(lg)
+    height: 350px
+  +media-breakpoint-down(md)
+    height: 300px
   &__item
     height: 100%
     font-size: 18px
@@ -132,6 +136,7 @@
       display: block
     img
       max-width: 100%
+      width: 100%
       height: 100%
       object-fit: cover
 
@@ -139,6 +144,10 @@
   position: relative
   padding: 20px 15px
   font-size: 16px
+  +media-breakpoint-down(lg)
+    font-size: 15px
+  +media-breakpoint-down(xs)
+    font-size: 14px
   &__text
     text-align: left
   .btn
@@ -149,6 +158,9 @@
   height: 70px
   background-color: rgba($formBg, .65 )
   transition: $trs
+  +media-breakpoint-down(md)
+    width: 30px
+    height: 60px
   &:hover
     background-color: $red
 .swiper-button-prev:after, .swiper-button-next:after

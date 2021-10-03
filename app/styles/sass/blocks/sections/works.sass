@@ -5,12 +5,18 @@
   padding-bottom: 100px
   background-image: url(../images/dist/works-bg.png)
   background-size: cover
+  background-attachment: fixed
   background-position: top center
   &-list
     margin-top: 40px
     display: grid
     grid-template-columns: repeat(2, 1fr)
     grid-gap: 40px
+    +media-breakpoint-down(lg)
+      grid-template-columns: 50% 50%
+    +media-breakpoint-down(sm)
+      grid-template-columns: 100%
+      grid-gap: 30px !important
   &-item
     position: relative
     max-width: 580px
@@ -21,11 +27,15 @@
       padding: 0
       list-style: none
       max-width: 220px
+      +media-breakpoint-down(lg)
+        max-width: 100%
       li
         display: flex
         justify-content: space-between
         font-size: 18px
         font-weight: 300
+        +media-breakpoint-down(lg)
+          font-size: 15px
     &__content
 
 .play-pulse
@@ -65,3 +75,7 @@
   100%
     transform: scale(2)
     opacity: 0
+
+@media screen and ( max-width: 1260px )
+  .works-list
+    grid-gap: 10px
