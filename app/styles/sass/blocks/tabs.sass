@@ -1,0 +1,92 @@
+.tabs
+  margin: 0
+  padding: 0
+  list-style: none
+  display: flex
+  padding: 0 22px
+  background: #f9f9f9
+  border-top-left-radius: 20px
+  border-top-right-radius: 20px
+  &__item
+    flex: 1
+    a
+      color: $textcolor
+      display: block
+      height: 100%
+      font-size: 15px
+      font-weight: 700
+      text-align: left
+      white-space: nowrap
+      padding: 16px 9px 9px
+      &[aria-selected="true"]
+        background: $textcolor
+        color: $white
+        border-top-left-radius: 20px
+        border-top-right-radius: 20px
+        svg
+          fill: $white
+      &:hover
+        text-decoration: none
+      svg
+        position: relative
+        top: -2px
+        margin-right: 1px
+  &__content
+    position: relative
+    background: $white
+    height: 100%
+    border-bottom-left-radius: 20px
+    border-bottom-right-radius: 20px
+    & > div
+      height: 100%
+    .video
+      position: relative
+      display: flex
+      &__cover
+        display: block
+        position: relative
+        flex: 0 0 290px
+        height: 100%
+        &.loading
+          &::after
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: $white
+            z-index: 11
+            background-image: url(../images/dist/loading.svg)
+            background-repeat: no-repeat
+            background-size: 50px 50px
+            background-position: center center
+            border-radius: 15px
+          img
+            opacity: 0
+        img
+          width: 100%
+          min-height: 250px
+          height: 100%
+          object-fit: cover
+          border-top-left-radius: 20px
+          border-bottom-left-radius: 20px
+      &__content
+        position: relative
+        width: 100%
+        padding: 30px 25px 20px
+        text-align: left
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        .title
+          text-align: left
+          line-height: 1.2
+          margin-bottom: 15px
+        .btn
+          margin-top: 15px
+          padding: 12px 0 13px
+        .text
+          min-height: 170px
+          max-height: 170px
+          overflow: hidden

@@ -1,5 +1,11 @@
 //import $ from 'jquery'; window.jQuery = $; window.$ = $ // import module example (npm i -D jquery)
+import $ from "jquery";
+window.$ = window.jQuery = $;
 import IMask from "imask";
+import Tabby from "tabbyjs";
+import { Fancybox } from "@fancyapps/ui";
+
+require("~/app/js/vendor/swiper/swiper-bundle.min.js");
 
 document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", function (e) {
@@ -89,9 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
         $lazyImages[imgIndex].src = $lazyImages[imgIndex].dataset.src;
         $lazyImages[imgIndex].removeAttribute("data-src");
         setTimeout(() => {
-          $lazyImages[imgIndex].parentElement.parentElement.classList.remove(
-            "loading"
-          );
+          $lazyImages[imgIndex].parentElement.classList.remove("loading");
         }, 200);
       } else if ($lazyImages[imgIndex].dataset.srcset) {
         $lazyImages[imgIndex].srcset = $lazyImages[imgIndex].dataset.srcset;
@@ -106,6 +110,41 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   /** End LazyLoad Images */
+
+  /** Sliders */
+  function initImagesSlider() {
+    const imagesSlider = new Swiper(".images-slider", {
+      slidesPerView: 1,
+      lazy: true,
+      loop: true,
+      effect: "fade",
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  }
+  initImagesSlider();
+  /** End Sliders */
+
+  /** Init Tabs */
+  function initTabs() {
+    const tabSelectors = document.querySelectorAll("[data-tabs]");
+    for (const [i, tabs] of [...tabSelectors].entries()) {
+      tabs.setAttribute(`data-tabs-${i}`, "");
+      new Tabby(`[data-tabs-${i}]`);
+    }
+  }
+  initTabs();
+  document.addEventListener(
+    "tabby",
+    function (event) {
+      initImagesSlider();
+    },
+    false
+  );
+
+  /** End Init Tabs */
 
   // Hamburger Menu
   const $burgerBtn = document.querySelector(".hamburger");
@@ -129,19 +168,9 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleMainNav($burgerBtn);
   toggleMainNav($mainNavClose, "close");
 
-  // Jquery Functions
-  // $(window).on("load", function () {
-  //   $(".preloader").delay(700).fadeOut("slow");
-  // });
+  Fancybox.bind("[data-fancybox]", {});
 
-  $("a[data-modal]").click(function (event) {
-    $(this).modal({
-      showClose: false,
-      fadeDelay: 1,
-      fadeDuration: 200,
-    });
-    return false;
-  });
+  // Jquery Functions
 
   $(".main-nav__item.has-child").on("mouseenter", function () {
     setTimeout(() => {

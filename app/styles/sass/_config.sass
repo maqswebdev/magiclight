@@ -7,7 +7,6 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font
 $trs: all .3s ease
 
 // colors
-$accent: orange // Accent Color
 $textcolor: #1f2029 // Text Color
 $red: #dc0037
 $pink: #ff0040
@@ -18,6 +17,7 @@ $orange: #c42200
 $grey: #e7e3ee
 $purple: #20123f
 $formBg: #241c35
+$accent: $red // Accent Color
 
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 30px
@@ -29,7 +29,8 @@ $gutter: $grid-gutter-width
 @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
 @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
 @import 'node_modules/hamburgers/_sass/hamburgers/hamburgers.scss'
-@import 'app/js/vendor/jquery-modal/jquery.modal.min'
+@import 'node_modules/@fancyapps/ui/dist/fancybox'
+@import 'app/js/vendor/swiper/swiper-bundle.min'
 
 // FONTS LOAD SECTION
 
