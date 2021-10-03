@@ -28,7 +28,6 @@ $gutter: $grid-gutter-width
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
 @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
-@import 'node_modules/hamburgers/_sass/hamburgers/hamburgers.scss'
 @import 'node_modules/@fancyapps/ui/dist/fancybox'
 @import 'app/js/vendor/swiper/swiper-bundle.min'
 
@@ -40,7 +39,7 @@ $gutter: $grid-gutter-width
 		font-style: $fstyle
 		font-weight: $fweight
 		src: local($fname), url($furl) format('woff2')
-		// font-display: swap // Uncomment to initially display system fonts
+		font-display: swap // Uncomment to initially display system fonts
 
 @include font('Museo', normal, 300, '../fonts/museosanscyrl-300.woff2')
 @include font('Museo', normal, 500, '../fonts/museosanscyrl-500.woff2')

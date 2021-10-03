@@ -5,8 +5,6 @@ import IMask from "imask";
 import Tabby from "tabbyjs";
 import { Fancybox } from "@fancyapps/ui";
 
-require("~/app/js/vendor/swiper/swiper-bundle.min.js");
-
 document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", function (e) {
     if (!e.target.classList.contains("link")) {
@@ -172,12 +170,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Jquery Functions
 
-  $(".main-nav__item.has-child").on("mouseenter", function () {
+  /*$(".main-nav__item.has-child").on("mouseenter", function () {
     setTimeout(() => {
       $(".main-nav__item")
         .removeClass("active")
         .eq($(this).index())
         .addClass("active");
     }, 200);
-  });
+  });*/
 });
