@@ -166,7 +166,22 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleMainNav($burgerBtn);
   toggleMainNav($mainNavClose, "close");
 
-  Fancybox.bind("[data-fancybox]", {});
+  Fancybox.bind("[data-fancybox]", {
+    touch: false,
+    autoFocus: false,
+  });
+
+  document.onkeydown = function (evt) {
+    var fb;
+
+    // 27 is the code for escape
+    if (
+      (evt || window.event).keyCode == 27 &&
+      (fb = $.fancybox.getInstance())
+    ) {
+      fb.close();
+    }
+  };
 
   // Jquery Functions
 

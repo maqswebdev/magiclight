@@ -238,16 +238,22 @@
     &:hover
       opacity: 1
     &-box
+      position: relative
       width: 32px
+      height: 3px
+      background: $white
       +media-breakpoint-down(xs)
         width: 28px
-
-.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
-  background: $white
-  width: 32px
-  height: 4px
-  +media-breakpoint-down(xs)
-    width: 28px
-    height: 3px
-.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::after, .hamburger.is-active .hamburger-inner::before
-  background: $white
+      &::after,
+      &::before
+        content: ""
+        position: absolute
+        width: 32px
+        height: 3px
+        background: $white
+        +media-breakpoint-down(xs)
+          width: 28px
+      &::after
+        top: -10px
+      &::before
+        top: 10px
