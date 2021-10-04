@@ -166,31 +166,16 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleMainNav($burgerBtn);
   toggleMainNav($mainNavClose, "close");
 
-  Fancybox.bind("[data-fancybox]", {
-    touch: false,
-    autoFocus: false,
-  });
-
-  document.onkeydown = function (evt) {
-    var fb;
-
-    // 27 is the code for escape
-    if (
-      (evt || window.event).keyCode == 27 &&
-      (fb = $.fancybox.getInstance())
-    ) {
-      fb.close();
-    }
-  };
+  Fancybox.bind("[data-fancybox]", {});
 
   // Jquery Functions
 
-  /*$(".main-nav__item.has-child").on("mouseenter", function () {
+  $(".main-nav__item.has-child").on("mouseenter", function () {
     setTimeout(() => {
       $(".main-nav__item")
         .removeClass("active")
         .eq($(this).index())
         .addClass("active");
     }, 200);
-  });*/
+  });
 });

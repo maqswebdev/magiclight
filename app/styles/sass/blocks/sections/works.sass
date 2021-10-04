@@ -7,6 +7,52 @@
   background-size: cover
   background-attachment: fixed
   background-position: top center
+  &__title
+    display: inline-block
+    position: relative
+    &::before
+      content: ""
+      position: absolute
+      top: 34px
+      left: -19px
+      width: 75px
+      height: 46px
+      background-image: url(../images/dist/works-title-before.png)
+      background-size: contain
+      background-repeat: no-repeat
+      +media-breakpoint-down(lg)
+        top: 27px
+        left: -30px
+      +media-breakpoint-down(md)
+        width: 67px
+        height: 38px
+        top: 22px
+      +media-breakpoint-down(xs)
+        width: 60px
+        height: 28px
+        top: 20px
+        left: -20px
+    &::after
+      content: ""
+      position: absolute
+      top: 14px
+      right: -67px
+      width: 89px
+      height: 32px
+      background-image: url(../images/dist/works-title-after.png)
+      background-size: contain
+      background-repeat: no-repeat
+      +media-breakpoint-down(lg)
+        top: 5px
+        right: -60px
+      +media-breakpoint-down(md)
+        width: 80px
+        height: 27px
+      +media-breakpoint-down(xs)
+        width: 60px
+        height: 19px
+        top: -5px
+        right: -50px
   &-list
     margin-top: 40px
     display: grid
@@ -22,6 +68,10 @@
     max-width: 580px
     display: flex
     flex-direction: column
+    +media-breakpoint-down(lg)
+      margin-bottom: 15px
+    +media-breakpoint-down(xs)
+      margin-bottom: 0
     &__defs
       margin: 0
       padding: 0
@@ -37,6 +87,10 @@
         +media-breakpoint-down(lg)
           font-size: 15px
     &__content
+  &__btn
+    margin-top: 70px
+    +media-breakpoint-down(md)
+      margin-top: 40px
 
 .play-pulse
   width: 45px
