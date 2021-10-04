@@ -123,6 +123,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   initImagesSlider();
+
+  const gallerySlider = new Swiper(".gallery-slider", {
+    slidesPerView: 1,
+    lazy: true,
+    loop: false,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 5,
+      },
+    },
+  });
   /** End Sliders */
 
   /** Init Tabs */
@@ -145,19 +170,16 @@ document.addEventListener("DOMContentLoaded", () => {
   /** End Init Tabs */
 
   // Hamburger Menu
-  const $burgerBtn = document.querySelector(".hamburger");
+  const $burgerBtn = document.querySelector(".hamburger-menu");
   const $mainNavClose = document.querySelector(".main-nav__close");
 
   function toggleMainNav(el, action = "open") {
-    const $hamburgerBtn = document.querySelector(".hamburger");
     const $mainNav = document.querySelector(".main-nav");
     el.addEventListener("click", function () {
       if (action === "close") {
-        $hamburgerBtn.classList.remove("is-active");
         $mainNav.classList.remove("active");
         document.body.style.overflow = "";
       } else {
-        $hamburgerBtn.classList.add("is-active");
         $mainNav.classList.add("active");
         document.body.style.overflow = "hidden";
       }

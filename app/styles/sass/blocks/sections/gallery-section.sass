@@ -1,0 +1,63 @@
+.gallery-section
+  text-align: center
+  padding-top: 70px
+  +media-breakpoint-down(sm)
+    padding-top: 60px
+  +media-breakpoint-down(xs)
+    padding-top: 50px
+  &__title
+    display: inline-block
+    position: relative
+    &::after
+      content: ""
+      position: absolute
+      top: 7px
+      left: 50%
+      transform: translateX(-50%)
+      width: 48px
+      height: 15px
+      background-image: url(../images/dist/works-title-before2.png)
+      background-size: contain
+      background-repeat: no-repeat
+      +media-breakpoint-down(lg)
+        top: 0px
+      +media-breakpoint-down(md)
+        width: 40px
+        height: 9px
+    &::before
+      content: ""
+      position: absolute
+      bottom: 0px
+      left: 50%
+      transform: translateX(-50%)
+      width: 102px
+      height: 13px
+      background-image: url(../images/dist/works-title-after2.png)
+      background-size: contain
+      background-repeat: no-repeat
+      +media-breakpoint-down(md)
+        bottom: -5px
+        width: 80px
+        height: 10px
+
+.gallery-slider
+  position: relative
+  margin-top: 25px
+  &__item
+    position: relative
+    img
+      max-width: 100%
+      height: auto
+      width: 100%
+  .swiper-button-prev
+    left: 304px
+    +media-breakpoint-down(lg)
+      left: 130px
+    +media-breakpoint-down(xs)
+      left: 15px
+  .swiper-button-next
+    right: 304px
+    +media-breakpoint-down(lg)
+      right: 130px
+    +media-breakpoint-down(xs)
+      right: 15px

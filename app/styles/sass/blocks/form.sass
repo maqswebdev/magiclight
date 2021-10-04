@@ -39,7 +39,59 @@
     path
       fill: $white
   &__btn
-    margin-top: 35px
+    margin-top: 15px
+  &__checkbox
+    position: relative
+    margin-top: 20px
+    input
+      display: none
+      &:checked
+        & + label
+          &::after
+            opacity: 1
+            visibility: visible
+    label
+      position: relative
+      color: $white
+      width: 100%
+      padding-left: 30px
+      cursor: pointer
+      +media-breakpoint-down(md)
+        font-size: 14px
+      +media-breakpoint-down(xs)
+        font-size: 12px
+        padding-left: 25px
+      a
+        color: $white
+        text-decoration: underline
+      &::before
+        content: ""
+        position: absolute
+        top: 5px
+        left: 0
+        width: 20px
+        height: 20px
+        background: $white
+        +media-breakpoint-down(xs)
+          width: 15px
+          height: 15px
+      &::after
+        content: ""
+        position: absolute
+        top: 7px
+        left: 2px
+        width: 15px
+        height: 15px
+        background-image: url(../images/dist/icons/check-solid.svg)
+        background-size: contain
+        background-repeat: no-repeat
+        opacity: 0
+        visibility: hidden
+        transition: $trs
+        +media-breakpoint-down(xs)
+          width: 12px
+          height: 12px
+          left: 1.5px
 // main-form
 .main-form
   position: relative
@@ -56,7 +108,7 @@
     padding: 20px 10px 10px 10px
   &__wrap
     position: relative
-    padding: 60px 22px 37px
+    padding: 60px 22px 30px
     background-image: none !important
     border-bottom: 2px solid $white
     border-left: 2px solid $white
