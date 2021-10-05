@@ -16,6 +16,7 @@
         flex-direction: column
         justify-content: flex-start
     .copyright
+      display: none
       +media-breakpoint-down(md)
         display: block
         font-size: 12px
@@ -53,6 +54,8 @@
     margin-top: 30px
     +media-breakpoint-down(sm)
       font-size: 12px
+    a
+      color: $white
   &-title
     display: inline-block
     color: $white
@@ -73,6 +76,13 @@
       li
         display: flex
         align-items: center
+        color: $white
+        font-size: 16px
+        font-weight: 700
+        +media-breakpoint-down(lg)
+          font-size: 15px
+        +media-breakpoint-down(xs)
+          font-size: 14px
         svg
           width: 20px
           height: 20px
@@ -84,22 +94,11 @@
             fill: $white
         a
           display: inline-block
-          font-size: 20px
-          font-weight: 700
           color: $white
-          +media-breakpoint-down(md)
-            font-size: 18px
-          +media-breakpoint-down(xs)
-            font-size: 14px
           &:hover
             text-decoration: none
           &.email
             text-decoration: underline
-            font-size: 18px
-            +media-breakpoint-down(md)
-              font-size: 16px
-            +media-breakpoint-down(xs)
-              font-size: 14px
 .copyright
   font-size: 13px
   font-weight: 500

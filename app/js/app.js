@@ -1,6 +1,7 @@
 //import $ from 'jquery'; window.jQuery = $; window.$ = $ // import module example (npm i -D jquery)
 import $ from "jquery";
 window.$ = window.jQuery = $;
+import modal from "jquery-modal";
 import IMask from "imask";
 import Tabby from "tabbyjs";
 import { Fancybox } from "@fancyapps/ui";
@@ -205,6 +206,14 @@ document.addEventListener("DOMContentLoaded", () => {
   Fancybox.bind("[data-fancybox]", {});
 
   // Jquery Functions
+
+  $("a[data-modal]").click(function (event) {
+    $(this).modal({
+      showClose: false,
+      fadeDuration: 300,
+    });
+    return false;
+  });
 
   $(".main-nav__item.has-child").on("mouseenter", function () {
     setTimeout(() => {
