@@ -127,15 +127,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const gallerySlider = new Swiper(".gallery-slider", {
     slidesPerView: 1,
     lazy: true,
-    loop: false,
+    loop: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    autoplay: {
+    /*autoplay: {
       delay: 3000,
       disableOnInteraction: false,
-    },
+    },*/
     breakpoints: {
       576: {
         slidesPerView: 2,
