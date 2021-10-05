@@ -23,6 +23,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const $chatBot = document.querySelector(".chat-bot");
+  const $chatBotClose = document.querySelector(".chat-bot__close");
+  const $chatBotIcon = document.querySelector(".chat-bot-icon");
+  if ($chatBotIcon) {
+    $chatBotIcon.addEventListener("click", function () {
+      $chatBot.classList.add("active");
+    });
+  }
+  if ($chatBotClose) {
+    $chatBotClose.addEventListener("click", function () {
+      $chatBot.classList.remove("active");
+    });
+  }
+
   /** VIDEO LAZYLOAD */
   var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
 
@@ -199,5 +213,17 @@ document.addEventListener("DOMContentLoaded", () => {
         .eq($(this).index())
         .addClass("active");
     }, 200);
+  });
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > $(this).height()) {
+      $(".to-top").addClass("active");
+    } else {
+      $(".to-top").removeClass("active");
+    }
+  });
+
+  $(".to-top").on("click", function () {
+    $("html, body").stop().animate({ scrollTop: 0 }, "slow", "swing");
   });
 });
