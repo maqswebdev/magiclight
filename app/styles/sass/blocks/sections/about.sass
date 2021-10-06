@@ -1,0 +1,221 @@
+.about
+  position: relative
+  text-align: center
+  padding: 60px 0 80px
+  background-image: url(../images/dist/about/about-bg.png)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: top center
+  +media-breakpoint-down(sm)
+    padding: 50px 0 60px
+  &__title
+    position: relative
+    display: inline-block
+
+// big-counters
+.big-counters
+  position: relative
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-gap: 50px
+  +media-breakpoint-down(lg)
+    grid-gap: 30px
+    margin-top: 60px
+  +media-breakpoint-down(md)
+    grid-template-columns: repeat(1, 1fr)
+  +media-breakpoint-down(sm)
+    grid-template-columns: repeat(2, 1fr)
+    margin-top: 40px
+  +media-breakpoint-down(xs)
+    margin-top: 30px
+  &-item
+    position: relative
+    max-width: 495px
+    +media-breakpoint-down(md)
+      max-width: 100%
+      margin-bottom: 30px
+    +media-breakpoint-down(sm)
+      margin-bottom: 20px
+    +media-breakpoint-down(xs)
+      margin-bottom: 15px
+    &:nth-child(odd)
+      margin-left: auto
+      +media-breakpoint-down(md)
+        margin-left: 0
+    &:nth-child(2)
+      .big-counters-item__text
+        &::after,
+        &::before
+          width: 35%
+          +media-breakpoint-down(md)
+            width: 40%
+      .big-counters-item__icon
+        img
+          max-width: 88%
+    &__text
+      position: relative
+      border-bottom: 3px solid $red
+      border-left: 3px solid $red
+      border-right: 3px solid $red
+      border-radius: 20px
+      padding: 50px 60px 35px
+      +media-breakpoint-down(lg)
+        height: 200px
+        padding: 40px 50px 30px
+      +media-breakpoint-down(md)
+        height: auto
+      +media-breakpoint-down(sm)
+        border: none
+        padding: 0
+      &::before,
+      &::after
+        content: ""
+        position: absolute
+        top: 0
+        width: 25%
+        height: 100%
+        border-top: 3px solid $red
+        z-index: 2
+        +media-breakpoint-down(md)
+          width: 33%
+        +media-breakpoint-down(sm)
+          display: none
+      &::before
+        left: 0
+        border-top-left-radius: 18px
+      &::after
+        right: 0
+        border-top-right-radius: 18px
+      .count
+        display: block
+        color: $red
+        font-weight: 900
+        font-size: 60px
+        position: absolute
+        top: -45px
+        left: 50%
+        transform: translateX(-50%)
+        +media-breakpoint-down(lg)
+          font-size: 52px
+          top: -40px
+        +media-breakpoint-down(sm)
+          font-size: 42px
+          line-height: 1.2
+          transform: unset
+          top: unset
+          left: unset
+          position: relative
+        +media-breakpoint-down(xs)
+          font-size: 32px
+      .title
+        display: block
+        font-weight: 900
+        font-size: 25px
+        line-height: 1.2
+        margin-bottom: 10px
+        +media-breakpoint-down(lg)
+          font-size: 20px
+        +media-breakpoint-down(sm)
+          font-size: 18px
+        +media-breakpoint-down(xs)
+          font-size: 15px
+      .descr
+        display: block
+        font-weight: 500
+        font-size: 20px
+        line-height: 1.2
+        +media-breakpoint-down(md)
+          font-size: 16px
+        +media-breakpoint-down(sm)
+          font-size: 15px
+          line-height: 1.2
+        +media-breakpoint-down(xs)
+          font-size: 14px
+    &__icon
+      width: 100px
+      height: 100px
+      margin: 0 auto 30px
+      +media-breakpoint-down(lg)
+        display: none
+      img
+        max-width: 100%
+        height: auto
+
+// small-counters
+.small-counters
+  position: relative
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-gap: 20px
+  max-width: 90%
+  margin: 35px auto 0
+  +media-breakpoint-down(lg)
+    max-width: 100%
+  +media-breakpoint-down(md)
+    margin: 0
+  +media-breakpoint-down(xs)
+    grid-gap: 15px
+  &-item
+    position: relative
+    display: flex
+    align-items: center
+    padding-left: 100px
+    +media-breakpoint-down(lg)
+      padding-left: 0
+    +media-breakpoint-down(sm)
+      flex-direction: column
+
+    &__icon
+      position: absolute
+      top: 0
+      left: 0
+      width: 100px
+      +media-breakpoint-down(lg)
+        display: none
+      img
+        max-width: 100%
+        height: auto
+    &__num
+      color: $red
+      font-size: 80px
+      font-weight: 900
+      +media-breakpoint-down(lg)
+        font-size: 72px
+      +media-breakpoint-down(md)
+        line-height: 1.2
+      +media-breakpoint-down(sm)
+        font-size: 42px
+      +media-breakpoint-down(xs)
+        font-size: 32px
+    &__title
+      font-size: 25px
+      font-weight: 900
+      text-align: left
+      line-height: 1.2
+      margin-left: 27px
+      +media-breakpoint-down(lg)
+        font-size: 20px
+      +media-breakpoint-down(md)
+        margin-left: 15px
+      +media-breakpoint-down(sm)
+        text-align: center
+        font-size: 18px
+        margin-left: 0
+      +media-breakpoint-down(xs)
+        font-size: 15px
+    &:nth-child(1)
+      .small-counters-item__icon
+        top: -5px
+        left: 17px
+    &:nth-child(2)
+      .small-counters-item__icon
+        top: 27px
+        left: 22px
+    &:nth-child(3)
+      .small-counters-item__icon
+        top: 15px
+        left: 25px
+    &:nth-child(3)
+      .small-counters-item__icon
+        top: 0
+        left: 10px

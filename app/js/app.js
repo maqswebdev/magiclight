@@ -6,6 +6,8 @@ import IMask from "imask";
 import Tabby from "tabbyjs";
 import { Fancybox } from "@fancyapps/ui";
 
+require("~/app/js/vendor/animateNumber/jquery.animateNumber.min.js");
+
 document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", function (e) {
     if (!e.target.classList.contains("link")) {
@@ -206,6 +208,19 @@ document.addEventListener("DOMContentLoaded", () => {
   Fancybox.bind("[data-fancybox]", {});
 
   // Jquery Functions
+
+  var comma_separator_number_step =
+    $.animateNumber.numberStepFactories.separator(" ");
+  $(".count").each(function () {
+    var tcount = $(this).data("count");
+    $(this).animateNumber(
+      {
+        number: tcount,
+        numberStep: comma_separator_number_step,
+      },
+      1000
+    );
+  });
 
   $("a[data-modal]").click(function (event) {
     $(this).modal({
