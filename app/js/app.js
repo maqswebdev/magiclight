@@ -165,6 +165,28 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
+
+  const reviewsSlider = new Swiper(".reviews-slider", {
+    slidesPerView: 1,
+    lazy: true,
+    loop: true,
+    spaceBetween: 15,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      480: {
+        slidesPerView: 2,
+      },
+      767: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 4,
+      },
+    },
+  });
   /** End Sliders */
 
   /** Init Tabs */

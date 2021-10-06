@@ -1,0 +1,25 @@
+.reviews
+  position: relative
+  text-align: center
+  padding: 60px 0
+  &-slider
+    position: relative
+    margin-top: 30px
+    &-item
+      position: relative
+      display: block
+      border-radius: 5px
+      width: 100%
+      height: 495px
+      +media-breakpoint-down(md)
+        height: 400px
+      img
+        border-radius: 5px
+        width: 100%
+        height: 100%
+        object-fit: cover
+        max-width: 100%
+    .swiper-button-prev
+      left: 0
+    .swiper-button-next
+      right: 0
