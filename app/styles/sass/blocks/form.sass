@@ -39,10 +39,10 @@
     path
       fill: $white
   &__btn
-    margin-top: 15px
+
   &__checkbox
     position: relative
-    margin-top: 20px
+    margin: 20px 0
     input
       display: none
       &:checked
@@ -56,6 +56,7 @@
       width: 100%
       padding-left: 30px
       cursor: pointer
+      margin: 0
       +media-breakpoint-down(md)
         font-size: 14px
       +media-breakpoint-down(xs)
@@ -67,7 +68,8 @@
       &::before
         content: ""
         position: absolute
-        top: 5px
+        top: 50%
+        transform: translateY(-50%)
         left: 0
         width: 20px
         height: 20px
@@ -78,7 +80,8 @@
       &::after
         content: ""
         position: absolute
-        top: 7px
+        top: 50%
+        transform: translateY(-50%)
         left: 2px
         width: 15px
         height: 15px
@@ -115,9 +118,9 @@
     border-right: 2px solid $white
     border-radius: 20px
     +media-breakpoint-down(md)
-      padding: 60px 22px 35px
+      padding: 60px 22px 25px
     +media-breakpoint-down(xs)
-      padding: 60px 22px 28px
+      padding: 60px 22px 20px
     &::after,
     &::before
       content: ""
@@ -163,3 +166,66 @@
     img
       max-width: 100%
       height: auto
+
+.ribbon-form
+  position: relative
+  width: 100%
+  height: auto
+  background-image: url(../images/dist/ribbon-bg.png)
+  background-size: cover
+  background-repeat: no-repeat
+  padding: 65px 0
+  background-position: center bottom
+  +media-breakpoint-down(md)
+    padding: 40px 0
+  &__title
+    color: $white
+    font-size: 38px
+    line-height: 1
+    font-weight: 900
+    text-transform: uppercase
+    +media-breakpoint-down(lg)
+      font-size: 28px
+    +media-breakpoint-down(md)
+      text-align: center
+    +media-breakpoint-down(xs)
+      font-size: 24px
+    span
+      font-weight: 300
+      font-size: 28px
+      text-transform: lowercase
+      +media-breakpoint-down(lg)
+        font-size: 20px
+      +media-breakpoint-down(sm)
+        font-size: 18px
+  &__img
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+    +media-breakpoint-down(md)
+      margin: 30px 0
+    span
+      display: block
+      font-weight: 500
+      font-size: 30px
+      color: $red
+      line-height: 1.2
+      margin-top: 15px
+      +media-breakpoint-down(lg)
+        font-size: 22px
+      +media-breakpoint-down(md)
+        font-size: 20px
+      +media-breakpoint-down(sm)
+        font-size: 18px
+    img
+      +media-breakpoint-down(sm)
+        width: 50px
+        height: auto
+  .form
+    +media-breakpoint-down(md)
+      max-width: 400px
+      margin: 0 auto
+    .form__btn
+      max-width: 100%
