@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const imagesSlider = new Swiper(".images-slider", {
       slidesPerView: 1,
       lazy: true,
-      loop: true,
+      loop: false,
       effect: "fade",
       navigation: {
         nextEl: ".swiper-button-next",
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const gallerySlider = new Swiper(".gallery-slider", {
     slidesPerView: 1,
     lazy: true,
-    loop: true,
+    loop: false,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const reviewsSlider = new Swiper(".reviews-slider", {
     slidesPerView: 1,
     lazy: true,
-    loop: true,
+    loop: false,
     spaceBetween: 15,
     navigation: {
       nextEl: ".swiper-button-next",

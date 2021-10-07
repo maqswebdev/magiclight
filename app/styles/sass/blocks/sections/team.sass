@@ -1,14 +1,43 @@
 .team
   position: relative
   text-align: center
-  padding: 60px 0
+  padding: 70px 0
   +media-breakpoint-down(sm)
-    padding: 50px 0 60px
+    padding: 70px 0 50px
+  +media-breakpoint-down(xs)
+    padding: 50px 0 40px
+  &__title
+    position: relative
+    display: inline-block
+    text-align: center
+    &::after
+      content: ""
+      position: absolute
+      top: -20px
+      left: 50%
+      transform: translateX(-50%)
+      width: 87px
+      height: 42px
+      background-image: url(../images/dist/stage-title-after.png)
+      background-size: contain
+      background-repeat: no-repeat
+      +media-breakpoint-down(lg)
+        top: -22px
+      +media-breakpoint-down(md)
+        top: -25px
+      +media-breakpoint-down(sm)
+        top: -30px
+      +media-breakpoint-down(xs)
+        width: 77px
+        height: 33px
+        top: -24px
   &-block
     position: relative
-    margin-top: 60px
+    margin-top: 50px
     +media-breakpoint-down(sm)
       margin-top: 40px
+    +media-breakpoint-down(xs)
+      margin-top: 30px
     &__top
       display: grid
       grid-template-columns: repeat(2, 1fr)
