@@ -187,6 +187,29 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
+
+  const videoSlider = new Swiper(".video-slider", {
+    slidesPerView: "auto",
+    lazy: true,
+    loop: true,
+    spaceBetween: 15,
+    centeredSlides: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      480: {
+        spaceBetween: 15,
+      },
+      767: {
+        spaceBetween: 30,
+      },
+      1200: {
+        spaceBetween: 50,
+      },
+    },
+  });
   /** End Sliders */
 
   /** Init Tabs */
