@@ -5,16 +5,28 @@ import modal from "jquery-modal";
 import IMask from "imask";
 import Tabby from "tabbyjs";
 import { Fancybox } from "@fancyapps/ui";
+import SmoothScroll from "smooth-scroll";
 
 require("~/app/js/vendor/animateNumber/jquery.animateNumber.min.js");
 
 document.addEventListener("DOMContentLoaded", () => {
+  function removeActiveClass() {
+    document.querySelectorAll(".main-nav__item").forEach((link) => {
+      link.classList.remove("active");
+    });
+  }
+
   document.addEventListener("click", function (e) {
     if (!e.target.classList.contains("link")) {
-      document.querySelectorAll(".main-nav__item ").forEach((link) => {
-        link.classList.remove("active");
-      });
+      removeActiveClass();
     }
+  });
+
+  const $allPageLinks = document.querySelectorAll(".link");
+  $allPageLinks.forEach(($link) => {
+    $link.addEventListener("click", function () {
+      removeActiveClass();
+    });
   });
 
   const $phoneMask = document.querySelectorAll(".input-phone");
@@ -25,6 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  const themeSmoothScroll = new SmoothScroll('a[href*="#"]', {
+    updateURL: false,
+  });
 
   const $chatBot = document.querySelector(".chat-bot");
   const $chatBotClose = document.querySelector(".chat-bot__close");
