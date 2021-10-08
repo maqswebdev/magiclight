@@ -10,6 +10,52 @@
     padding-bottom: 80px
   +media-breakpoint-down(xs)
     padding: 50px 0
+  &__title
+    position: relative
+    display: inline-block
+    &::after
+      content: ""
+      position: absolute
+      top: 5px
+      right: -22px
+      width: 20px
+      height: 26px
+      background-image: url(../images/dist/about/about-title-before.png)
+      background-size: contain
+      background-repeat: no-repeat
+      +media-breakpoint-down(lg)
+        top: 0
+      +media-breakpoint-down(md)
+        width: 16px
+        height: 22px
+        right: -18px
+      +media-breakpoint-down(sm)
+        width: 13px
+        height: 16px
+        right: -15px
+    &::before
+      content: ""
+      position: absolute
+      top: 70px
+      left: 50%
+      transform: translateX(-50%)
+      width: 148px
+      height: 19px
+      background-image: url(../images/dist/about/about-title-after.png)
+      background-size: contain
+      background-repeat: no-repeat
+      +media-breakpoint-down(lg)
+        top: 60px
+      +media-breakpoint-down(md)
+        width: 90px
+        height: 12px
+        top: 47px
+      +media-breakpoint-down(sm)
+        width: 54px
+        height: 8px
+        top: 40px
+      +media-breakpoint-down(xs)
+        top: 35px
   &-list
     display: flex
     flex-wrap: wrap

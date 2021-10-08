@@ -61,3 +61,48 @@
       right: 130px
     +media-breakpoint-down(xs)
       right: 15px
+
+.gallery-works
+  position: relative
+  text-align: center
+  padding: 50px 0
+  +media-breakpoint-down(lg)
+    padding: 40px 0
+  +media-breakpoint-down(sm)
+    padding: 30px 0 40px
+  +media-breakpoint-down(xs)
+    padding: 10px 0 40px
+  &__title
+    position: relative
+    display: inline-block
+  &-list
+    display: grid
+    grid-gap: 10px
+    grid-template-columns: repeat(3, 1fr)
+    margin: 50px 0
+    +media-breakpoint-down(md)
+      grid-template-columns: repeat(2, 1fr)
+    +media-breakpoint-down(sm)
+      margin: 40px 0
+  &__item
+    width: 100%
+    height: 246px
+    overflow: hidden
+    +media-breakpoint-down(lg)
+      height: 190px
+    +media-breakpoint-down(md)
+      height: 220px
+    +media-breakpoint-down(sm)
+      height: 165px
+    +media-breakpoint-down(xs)
+      height: 100%
+      max-height: 150px
+    &:hover
+      img
+        transform: scale(1.1)
+    img
+      max-width: 100%
+      width: 100%
+      height: 100%
+      object-fit: cover
+      transition: $trs
