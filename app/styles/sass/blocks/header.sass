@@ -136,15 +136,18 @@
   list-style: none
   background: $white
   z-index: 3
-  width: calc( 100% + 150px)
+  width: calc( 100% + 200px)
   height: auto
   opacity: 0
   visibility: hidden
   transition: $trs
+  padding-bottom: 20px
+  border-bottom-left-radius: 22px
+  border-bottom-right-radius: 22px
   +media-breakpoint-down(lg)
-    left: unset
-    right: -20px
-    top: 140%
+    left: -50%
+    top: 117%
+    width: 250px
   +media-breakpoint-down(md)
     visibility: visible
     opacity: 1
@@ -154,21 +157,19 @@
     width: auto
     background: transparent
     margin: 5px 0
+    padding-bottom: 0
   +media-breakpoint-down(xs)
     margin-top: 0
   &.active
     opacity: 1
     visibility: visible
   li
-    &:last-child
-      a
-        border-bottom: none
     a
       display: block
-      border-bottom: 1px solid $red
+      position: relative
       color: $red
       font-weight: 500
-      padding: 7px 15px
+      padding: 7px 30px
       +media-breakpoint-down(md)
         color: $white
         padding: 0
@@ -180,6 +181,19 @@
         text-decoration: none
         background: $red
         color: $white
+        &::after
+          display: none
+      &::after
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 30px
+        right: 30px
+        width: calc( 100% - 60px )
+        height: 1px
+        background: #ddd
+        +media-breakpoint-down(md)
+          display: none
 
 // contacts
 .contacts
