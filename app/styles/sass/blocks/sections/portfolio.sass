@@ -1,10 +1,14 @@
 .portfolio
   position: relative
   text-align: center
-  padding: 60px 0
+  padding: 60px 0 70px
   background-image: url(../images/dist/portfolio-bg.png)
   background-size: cover
   background-position: top center
+  +media-breakpoint-down(xs)
+    padding: 40px 0 60px
+  &.no-bg
+    background-image: none
   &__title
     position: relative
     display: inline-block
@@ -155,7 +159,142 @@
       font-size: 16px
     +media-breakpoint-down(xs)
       font-size: 15px
+      margin-top: 30px
+  &-slider
+    position: relative
+    margin-top: 50px
+    +media-breakpoint-down(xs)
+      margin-top: 40px
+    &-item
+      position: relative
+      display: block
+      width: 100%
+      height: 300px
+      border-radius: 20px
+      &::after
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 100%
+        border-radius: 20px
+        background: linear-gradient(to top, rgba(32,18,63,1) 0%, rgba(32,18,63,0.15199583251269255) 60%)
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        border-radius: 20px
+      &__title
+        position: absolute
+        font-size: 20px
+        font-weight: 900
+        bottom: 20px
+        left: 0
+        z-index: 1
+        color: $white
+        line-height: 1.1
+        padding: 0 15px
+        +media-breakpoint-down(lg)
+          font-size: 18px
+        +media-breakpoint-down(sm)
+          font-size: 16px
+        +media-breakpoint-down(xs)
+          font-size: 15px
+  &-text
+    position: relative
+    p
+      font-size: 25px
+      font-weight: 300
+      +media-breakpoint-down(lg)
+        font-size: 20px
+      +media-breakpoint-down(md)
+        font-size: 18px
+      +media-breakpoint-down(sm)
+        font-size: 16px
+      +media-breakpoint-down(xs)
+        font-size: 15px
+    &__img
+      img
+        max-width: 100%
+        height: auto
+    .img-text
+      margin: 0 -15px 70px
+      +media-breakpoint-down(md)
+        margin: 0 -15px 50px
+  &-shape-text
+    max-width: 650px
+    margin: 30px auto 70px
+    +media-breakpoint-down(lg)
+      max-width: 600px
+    +media-breakpoint-down(md)
+      max-width: 500px
+      margin: 20px auto 50px
+    +media-breakpoint-down(sm)
+      margin: 20px auto 40px
+    +media-breakpoint-down(xs)
+      max-width: 100%
+    img
+      max-width: 100%
+      height: auto
+  &-btn
+    margin-top: 50px
+    +media-breakpoint-down(xs)
+      margin-top: 30px
 
+h1.portfolio-text__title
+  position: relative
+  text-transform: uppercase
+  font-size: 40px
+  font-weight: 900
+  margin: 0 0 30px
+  +media-breakpoint-down(lg)
+    font-size: 36px
+  +media-breakpoint-down(md)
+    font-size: 28px
+  +media-breakpoint-down(sm)
+    font-size: 24px
+    margin: 0 0 15px
+  +media-breakpoint-down(xs)
+    font-size: 22px
+  &::after
+    content: attr(data-text)
+    position: absolute
+    top: -40px
+    left: 0
+    font-size: 80px
+    font-weight: 900
+    opacity: 0.7
+    z-index: -1
+    color: #eee
+    line-height: 1.1
+    +media-breakpoint-down(lg)
+      font-size: 70px
+      top: -27px
+    +media-breakpoint-down(md)
+      font-size: 46px
+      top: -16px
+    +media-breakpoint-down(sm)
+      font-size: 38px
+      top: -14px
+    +media-breakpoint-down(xs)
+      font-size: 34px
+      top: -9px
+
+h2.portfolio-text__title
+  font-size: 30px
+  font-weight: 900
+  margin: 0 0 30px
+  max-width: 545px
+  +media-breakpoint-down(lg)
+    font-size: 26px
+  +media-breakpoint-down(md)
+    font-size: 22px
+  +media-breakpoint-down(sm)
+    font-size: 20px
+    margin: 0 0 15px
+  +media-breakpoint-down(xs)
+    font-size: 18px
 @media screen and ( max-width: 480px )
   .portfolio-covers-list
     grid-template-columns: repeat(1,1fr)

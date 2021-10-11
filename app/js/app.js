@@ -226,6 +226,33 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
+
+  const portfolioSlider = new Swiper(".portfolio-slider", {
+    slidesPerView: 1,
+    lazy: true,
+    loop: false,
+    spaceBetween: 15,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+      767: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+  });
   /** End Sliders */
 
   /** Init Tabs */
@@ -266,7 +293,9 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleMainNav($burgerBtn);
   toggleMainNav($mainNavClose, "close");
 
-  Fancybox.bind("[data-fancybox]", {});
+  Fancybox.bind("[data-fancybox]", {
+    animated: false,
+  });
 
   // Jquery Functions
 
