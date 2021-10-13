@@ -33,6 +33,14 @@ h1.title
     +media-breakpoint-down(xs)
       font-size: 52px
       bottom: -12px
+  &.short
+    max-width: 450px
+    line-height: 1.2
+    &::after
+      width: 900px
+      white-space: pre-wrap
+      line-height: 0.8
+      bottom: -8px
 
 h2.title
   position: relative

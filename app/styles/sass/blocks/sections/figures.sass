@@ -1,0 +1,224 @@
+.figures
+  &-section
+    position: relative
+    padding: 60px 0 0
+    text-align: center
+    +media-breakpoint-down(xs)
+      padding-top: 40px
+    &__title
+      position: relative
+      display: inline-block
+      &::after
+        content: ""
+        position: absolute
+        top: 55px
+        right: -22px
+        width: 20px
+        height: 26px
+        background-image: url(../images/dist/about/about-title-before.png)
+        background-size: contain
+        background-repeat: no-repeat
+        +media-breakpoint-down(lg)
+          top: 36px
+          right: 13px
+        +media-breakpoint-down(md)
+          width: 16px
+          top: -8px
+          height: 22px
+          right: -18px
+        +media-breakpoint-down(sm)
+          width: 13px
+          height: 16px
+          top: -5px
+          right: 25px
+        +media-breakpoint-down(xs)
+          display: none
+      &::before
+        content: ""
+        position: absolute
+        top: 125px
+        left: 50%
+        transform: translateX(-50%)
+        width: 148px
+        height: 19px
+        background-image: url(../images/dist/about/about-title-after.png)
+        background-size: contain
+        background-repeat: no-repeat
+        +media-breakpoint-down(lg)
+          top: 110px
+        +media-breakpoint-down(md)
+          width: 90px
+          height: 12px
+          top: 80px
+        +media-breakpoint-down(sm)
+          width: 54px
+          height: 8px
+          top: 74px
+        +media-breakpoint-down(xs)
+          display: none
+  &-covers
+    position: relative
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 30px
+    margin-top: 100px
+    margin-bottom: 20px
+    +media-breakpoint-down(lg)
+      margin-top: 80px
+    +media-breakpoint-down(md)
+      margin-top: 50px
+    +media-breakpoint-down(sm)
+      grid-gap: 15px
+    +media-breakpoint-down(xs)
+      margin-top: 40px
+      margin-bottom: 0
+  &-cover
+    display: block
+    position: relative
+    width: 100%
+    height: 400px
+    border-radius: 15px
+    overflow: hidden
+    +media-breakpoint-down(lg)
+      height: 360px
+    +media-breakpoint-down(md)
+      height: 300px
+    +media-breakpoint-down(sm)
+      height: 250px
+    +media-breakpoint-down(xs)
+      height: 220px
+    &:hover
+      img
+        transform: scale(1.1)
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      border-radius: 15px
+      transition: $trs
+    &::after
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(to top,#20123f 0,rgba(32,18,63,.151996) 60%)
+      border-radius: 15px
+    &__title
+      position: absolute
+      bottom: 30px
+      left: 0
+      width: 100%
+      height: auto
+      text-align: center
+      color: $white
+      font-weight: 900
+      font-size: 35px
+      line-height: 1.2
+      z-index: 1
+      padding: 0 45px
+      +media-breakpoint-down(lg)
+        font-size: 32px
+      +media-breakpoint-down(md)
+        font-size: 26px
+        line-height: 1.1
+        padding: 0 15px
+      +media-breakpoint-down(sm)
+        font-size: 20px
+      +media-breakpoint-down(xs)
+        font-size: 16px
+        bottom: 15px
+  &-text
+    position: relative
+    text-align: left
+    background-image: url(../images/dist/bg33.png)
+    background-size: 1100px
+    background-repeat: no-repeat
+    background-position: 100px 0
+    padding-top: 150px
+    padding-bottom: 30px
+    +media-breakpoint-down(lg)
+      background-size: 900px
+      padding-top: 100px
+    +media-breakpoint-down(md)
+      background-size: 700px
+      padding-top: 70px
+      padding-bottom: 50px
+    +media-breakpoint-down(sm)
+      background-image: none !important
+      padding: 40px 0
+    +media-breakpoint-down(xs)
+      padding: 30px 0
+    &.bg
+      background-image: url(../images/dist/bg44.png)
+      background-size: cover
+      background-position: center center
+      padding: 120px 0
+      +media-breakpoint-down(lg)
+        padding: 90px 0
+      +media-breakpoint-down(md)
+        padding: 70px 0
+      +media-breakpoint-down(sm)
+        padding: 0 0 40px
+    &__top
+      position: relative
+    &__bottom
+      position: relative
+      padding-top: 150px
+      +media-breakpoint-down(md)
+        padding-top: 90px
+      +media-breakpoint-down(sm)
+        padding-top: 0
+    p
+      font-weight: 300
+      font-size: 25px
+      line-height: 1.2
+      margin-bottom: 15px
+      +media-breakpoint-down(lg)
+        font-size: 20px
+      +media-breakpoint-down(md)
+        font-size: 18px
+      +media-breakpoint-down(sm)
+        font-size: 16px
+      +media-breakpoint-down(xs)
+        font-size: 15px
+      &:last-child
+        margin-bottom: 0
+    &__title
+      font-size: 30px
+      font-weight: 900
+      line-height: 1.2
+      display: block
+      margin-bottom: 15px
+      +media-breakpoint-down(lg)
+        font-size: 26px
+      +media-breakpoint-down(md)
+        font-size: 22px
+      +media-breakpoint-down(sm)
+        font-size: 20px
+      +media-breakpoint-down(xs)
+        font-size: 18px
+      &.red
+        color: $red
+    &__shape
+      img
+        max-width: 100%
+        height: auto
+    &__shape
+      position: relative
+      top: -50px
+      +media-breakpoint-down(lg)
+        top: -25px
+      +media-breakpoint-down(md)
+        top: 0
+      +media-breakpoint-down(sm)
+        margin-top: 30px
+
+@media screen and ( max-width: 1400px )
+  .figures-text
+    background-position: top left
+
+@media screen and ( max-width: 420px )
+  .figures-covers
+    grid-template-columns: repeat(1, 1fr)
