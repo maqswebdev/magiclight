@@ -38,6 +38,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const $allDataTexts = document.querySelectorAll("[form-text]");
+  const $clickedInput = document.querySelector("input[name='clicked']");
+  if ($allDataTexts) {
+    $allDataTexts.forEach(($text) => {
+      $text.addEventListener("click", function () {
+        $clickedInput.value = $text.getAttribute("form-text");
+      });
+    });
+  }
+
   const themeSmoothScroll = new SmoothScroll('a[href*="#"]', {
     updateURL: false,
   });
