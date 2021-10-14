@@ -69,9 +69,9 @@
       margin-top: 50px
     +media-breakpoint-down(sm)
       grid-gap: 15px
+      margin-bottom: 0
     +media-breakpoint-down(xs)
       margin-top: 40px
-      margin-bottom: 0
   &-cover
     display: block
     position: relative
@@ -132,21 +132,14 @@
   &-text
     position: relative
     text-align: left
-    background-image: url(../images/dist/bg33.png)
-    background-size: 1100px
-    background-repeat: no-repeat
-    background-position: 100px 0
     padding-top: 150px
     padding-bottom: 30px
     +media-breakpoint-down(lg)
-      background-size: 900px
       padding-top: 100px
     +media-breakpoint-down(md)
-      background-size: 700px
       padding-top: 70px
       padding-bottom: 50px
     +media-breakpoint-down(sm)
-      background-image: none !important
       padding: 40px 0
     +media-breakpoint-down(xs)
       padding: 30px 0
@@ -160,7 +153,18 @@
       +media-breakpoint-down(md)
         padding: 70px 0
       +media-breakpoint-down(sm)
-        padding: 0 0 40px
+        padding: 40px 0
+    .abs-image
+      top: -130px
+      left: -50px
+      +media-breakpoint-down(lg)
+        top: -100px
+        left: -90px
+      +media-breakpoint-down(md)
+        top: -60px
+        left: -50px
+      +media-breakpoint-down(sm)
+        display: none
     &__top
       position: relative
     &__bottom
@@ -214,6 +218,14 @@
         top: 0
       +media-breakpoint-down(sm)
         margin-top: 30px
+
+.abs-image
+  position: absolute
+  top: 0
+  left: 0
+  z-index: -1
+  max-width: 100%
+  height: auto
 
 @media screen and ( max-width: 1400px )
   .figures-text
