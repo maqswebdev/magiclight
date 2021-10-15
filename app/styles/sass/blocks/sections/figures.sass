@@ -245,16 +245,19 @@
         padding: 10px 15px
       +media-breakpoint-down(xs)
         font-size: 14px
-      &:hover
+      &:hover,
+      &.active
         background-color: $red
         text-decoration: none
         color: $white
       &:first-child
-        &:hover
+        &:hover,
+        &.active
           border-top-left-radius: 10px
           border-top-right-radius: 10px
       &:last-child
-        &:hover
+        &:hover,
+        &.active
           border-bottom-left-radius: 10px
           border-bottom-right-radius: 10px
   &-list
