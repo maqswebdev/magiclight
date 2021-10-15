@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const themeSmoothScroll = new SmoothScroll('a[href*="#"]', {
+  const themeSmoothScroll = new SmoothScroll("a.link", {
     updateURL: false,
   });
 
@@ -260,6 +260,31 @@ document.addEventListener("DOMContentLoaded", () => {
       1200: {
         slidesPerView: 3,
         spaceBetween: 30,
+      },
+    },
+  });
+
+  const figuresSlider = new Swiper(".figures-slider", {
+    slidesPerView: 1,
+    lazy: true,
+    loop: false,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      480: {
+        slidesPerView: 2,
+      },
+      767: {
+        slidesPerView: 3,
+      },
+      992: {
+        slidesPerView: 4,
+      },
+      1200: {
+        slidesPerView: 5,
       },
     },
   });

@@ -346,6 +346,30 @@
 .text-center
   text-align: center
 
+.chars
+  &-list
+    position: relative
+  &-item
+    display: flex
+    justify-content: space-between
+    color: $red
+    font-size: 14px
+    font-weight: 500
+    margin-bottom: 5px
+    &:last-child
+      margin-bottom: 0
+    &__label
+      position: relative
+    &__seperator
+      flex: 1
+      border-bottom: 1px dashed $red
+      position: relative
+      top: -7px
+      margin: 0 10px
+
+.swiper-slide
+  height: auto
+
 @media screen and ( max-width: 480px )
   .video-slider-item
     width: 80%
@@ -356,13 +380,17 @@
     display: none
 
 .swiper-button-next, .swiper-button-prev
-  width: 40px
-  height: 70px
-  background-color: rgba($formBg, .65 )
+  width: 50px
+  height: 50px
+  background-color: $red
   transition: $trs
+  opacity: 0.5
+  border-radius: 50%
+  &:hover
+    opacity: 1
   +media-breakpoint-down(md)
-    width: 30px
-    height: 60px
+    width: 45px
+    height: 45px
   &:hover
     background-color: $red
 .swiper-button-prev:after, .swiper-button-next:after
@@ -372,9 +400,10 @@
   background-size: contain
   background-repeat: no-repeat
   background-position: center center
-  background-image: url(../images/dist/slider-arrow.png)
-.swiper-button-prev:after
+  background-image: url(../images/dist/icons/arrow.svg)
+.swiper-button-next:after
   transform: rotate(180deg)
+
 .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled
   opacity: 0
   visibility: hidden
