@@ -56,6 +56,43 @@ h2.title
   +media-breakpoint-down(xs)
     font-size: 24px
 
+h3.title
+  display: inline-block
+  position: relative
+  font-size: 36px
+  font-weight: 900
+  margin: 0
+  line-height: 1.2
+  +media-breakpoint-down(lg)
+    font-size: 32px
+  +media-breakpoint-down(md)
+    font-size: 28px
+  +media-breakpoint-down(sm)
+    font-size: 24px
+  +media-breakpoint-down(xs)
+    font-size: 20px
+    line-height: 1.2
+  &::after
+    content: attr(data-text)
+    position: absolute
+    bottom: 7px
+    left: 50%
+    transform: translateX(-50%)
+    font-size: 56px
+    font-weight: 900
+    color: $pink
+    opacity: 0.1
+    white-space: nowrap
+    +media-breakpoint-down(lg)
+      font-size: 52px
+    +media-breakpoint-down(md)
+      font-size: 46px
+    +media-breakpoint-down(sm)
+      font-size: 36px
+    +media-breakpoint-down(xs)
+      font-size: 32px
+      bottom: 0
+
 h5.title
   position: relative
   font-size: 18px
