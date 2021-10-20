@@ -1,30 +1,29 @@
 .backlight
   position: relative
-  padding-top: 75px
   text-align: center
   background-image: url(../images/dist/backlight/backlight-bg.png)
   background-size: contain
   background-position: center center
   background-repeat: no-repeat
   +media-breakpoint-down(sm)
-    padding-top: 60px
   &__title
     display: inline-block
     position: relative
     &::after
       content: ""
       position: absolute
-      top: -30px
-      left: -33px
-      width: 66px
-      height: 71px
+      top: -18px
+      left: -26px
+      width: 48px
+      height: 62px
       background-image: url(../images/dist/backlight/backlight-shape1.png)
       background-size: contain
       background-repeat: no-repeat
       +media-breakpoint-down(lg)
-        width: 60px
-        height: 65px
-        top: -25px
+        width: 40px
+        height: 56px
+        top: -14px
+        left: -20px
       +media-breakpoint-down(md)
         width: 45px
         height: 50px
@@ -35,8 +34,8 @@
     &::before
       content: ""
       position: absolute
-      top: 55px
-      right: -20px
+      top: 48px
+      right: -15px
       width: 20px
       height: 26px
       background-image: url(../images/dist/backlight/backlight-shape2.png)
@@ -45,7 +44,7 @@
       +media-breakpoint-down(lg)
         width: 17px
         height: 23px
-        top: 45px
+        top: 36px
         right: -16px
       +media-breakpoint-down(md)
         right: -13px
@@ -58,18 +57,20 @@
     grid-template-columns: repeat(5, 1fr)
     grid-gap: 10px
     flex-wrap: wrap
-    margin-top: 47px
+    max-width: 80%
+    margin: 35px auto 0
     +media-breakpoint-down(lg)
       grid-template-columns: repeat(4, 1fr)
     +media-breakpoint-down(md)
       grid-template-columns: repeat(3, 1fr)
+      max-width: 100%
     +media-breakpoint-down(xs)
       grid-template-columns: repeat(2, 1fr)
       margin-top: 40px
       grid-gap: 5px
   &-item
     position: relative
-    height: 300px
+    height: 250px
     border-radius: 15px
     overflow: hidden
     +media-breakpoint-down(md)
@@ -114,13 +115,11 @@
       position: absolute
       bottom: 15px
       left: 10px
-      font-size: 20px
+      font-size: 16px
       font-weight: 900
       color: $white
       text-align: left
-      +media-breakpoint-down(lg)
-        font-size: 18px
-        padding-right: 10px
+      padding-right: 10px
       +media-breakpoint-down(sm)
         font-size: 15px
       &::after

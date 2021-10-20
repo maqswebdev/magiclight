@@ -1,6 +1,7 @@
 .gallery-section
   text-align: center
   padding-top: 70px
+  padding-bottom: 0 !important
   +media-breakpoint-down(sm)
     padding-top: 60px
   +media-breakpoint-down(xs)
@@ -24,6 +25,8 @@
       +media-breakpoint-down(md)
         width: 40px
         height: 9px
+      +media-breakpoint-down(xs)
+        top: -5px
     &::before
       content: ""
       position: absolute
@@ -39,6 +42,9 @@
         bottom: -5px
         width: 80px
         height: 10px
+      +media-breakpoint-down(xs)
+        width: 60px
+        bottom: -10px
 
 .gallery-slider
   position: relative

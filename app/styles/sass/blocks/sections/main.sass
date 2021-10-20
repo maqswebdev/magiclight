@@ -1,13 +1,13 @@
 .main
   position: relative
-  padding-top: 30px
-  padding-bottom: 250px
+  padding-top: 30px !important
+  padding-bottom: 200px !important
   +media-breakpoint-down(md)
-    padding-bottom: 200px
+    padding-bottom: 170px !important
   +media-breakpoint-down(sm)
-    padding-bottom: 150px
+    padding-bottom: 150px !important
   +media-breakpoint-down(xs)
-    padding-bottom: 100px
+    padding-bottom: 100px !important
   &::after
     content: ""
     position: absolute
@@ -50,16 +50,16 @@
     text-align: center
     color: $white
     &__description
-      font-size: 30px
+      font-size: 26px
       line-height: 1.2
       +media-breakpoint-down(lg)
-        font-size: 28px
-      +media-breakpoint-down(md)
         font-size: 24px
-      +media-breakpoint-down(sm)
+      +media-breakpoint-down(md)
         font-size: 22px
-      +media-breakpoint-down(xs)
+      +media-breakpoint-down(sm)
         font-size: 18px
+      +media-breakpoint-down(xs)
+        font-size: 16px
   .location
     margin-top: 20px
     +media-breakpoint-down(md)
@@ -77,6 +77,13 @@
       margin-top: 40px
   .main-form
     margin-left: auto
-    margin-top: 107px
+    margin-top: 50px
     +media-breakpoint-down(md)
       margin: 40px auto 0
+  .video-popup-btn
+    margin-left: auto
+    min-width: 350px
+    margin-top: 20px
+    +media-breakpoint-down(md)
+      margin-left: 0
+      margin: 20px auto 0

@@ -1,9 +1,6 @@
 .stages
   position: relative
   text-align: center
-  padding: 70px 0
-  +media-breakpoint-down(sm)
-    padding: 60px 0
   &__btn
     margin-top: 50px
     +media-breakpoint-down(md)
@@ -26,19 +23,20 @@
       +media-breakpoint-down(lg)
         top: -22px
       +media-breakpoint-down(md)
+        width: 70px
         top: -25px
       +media-breakpoint-down(sm)
         top: -30px
       +media-breakpoint-down(xs)
-        width: 77px
+        width: 60px
         height: 33px
         top: -24px
   &-list
     margin-top: 55px
     +media-breakpoint-down(md)
-      margin-top: 47px
+      margin-top: 35px
     +media-breakpoint-down(xs)
-      margin-top: 40px
+      margin-top: 30px
   &-item
     position: relative
     display: flex
@@ -67,7 +65,7 @@
         margin-left: 0
       .stages-item__text
         right: 0
-        left: 135px
+        left: 120px
         +media-breakpoint-down(lg)
           left: 110px
         +media-breakpoint-down(md)
@@ -136,26 +134,28 @@
         animation: iconPulse 2s 1s ease-out infinite
         animation-delay: .5s
     &__title
-      font-size: 25px
+      font-size: 22px
       font-weight: 700
       line-height: 1.2
       color: $textcolor
       margin: 0
       +media-breakpoint-down(lg)
-        font-size: 20px
-      +media-breakpoint-down(sm)
         font-size: 18px
+      +media-breakpoint-down(md)
+        margin-bottom: 5px
+      +media-breakpoint-down(sm)
+        font-size: 16px
       +media-breakpoint-down(xs)
         font-size: 15px
     &__text
       color: #848691
-      font-size: 18px
+      font-size: 16px
       font-weight: 500
       line-height: 1.2
       position: absolute
       top: 50%
       transform: translateY(-50%)
-      right: 135px
+      right: 120px
       +media-breakpoint-down(lg)
         font-size: 15px
         right: 110px
