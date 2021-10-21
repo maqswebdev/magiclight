@@ -14,10 +14,10 @@
     &::before
       content: ""
       position: absolute
-      top: 34px
-      left: -19px
+      top: 30px
+      left: -30px
       width: 75px
-      height: 46px
+      height: 39px
       background-image: url(../images/dist/works-title-before.png)
       background-size: contain
       background-repeat: no-repeat
@@ -31,15 +31,15 @@
       +media-breakpoint-down(xs)
         width: 60px
         height: 28px
-        top: 20px
-        left: -20px
+        top: 15px
+        left: -24px
     &::after
       content: ""
       position: absolute
-      top: 14px
-      right: -67px
-      width: 89px
-      height: 32px
+      top: 12px
+      right: -55px
+      width: 80px
+      height: 28px
       background-image: url(../images/dist/works-title-after.png)
       background-size: contain
       background-repeat: no-repeat
@@ -58,7 +58,7 @@
     margin-top: 40px
     display: grid
     grid-template-columns: repeat(2, 1fr)
-    grid-gap: 40px
+    grid-gap: 20px
     +media-breakpoint-down(lg)
       grid-template-columns: 50% 50%
     +media-breakpoint-down(sm)
@@ -66,36 +66,35 @@
       grid-gap: 30px !important
   &-item
     position: relative
-    max-width: 580px
+    max-width: 600px
     display: flex
     flex-direction: column
-    +media-breakpoint-down(lg)
-      margin-bottom: 15px
-    +media-breakpoint-down(xs)
-      margin-bottom: 0
+    +media-breakpoint-down(sm)
       box-shadow: 0 0 10px 0 rgba(0,0,0,.25)
       border-radius: 20px
+    +media-breakpoint-down(xs)
+      margin-bottom: 0
     &__defs
       margin: 0
       padding: 0
       list-style: none
-      max-width: 220px
+      max-width: 240px
       +media-breakpoint-down(lg)
         max-width: 100%
       li
         display: flex
         justify-content: space-between
-        font-size: 16px
+        font-size: 15px
         font-weight: 300
-        +media-breakpoint-down(lg)
-          font-size: 15px
+        +media-breakpoint-down(sm)
+          font-size: 14px
     &__content
   &__btn
-    margin-top: 70px
+    margin-top: 50px
     +media-breakpoint-down(lg)
-      margin-top: 50px
-    +media-breakpoint-down(md)
       margin-top: 40px
+    +media-breakpoint-down(xs)
+      margin-top: 30px
 
 .play-pulse
   width: 45px
@@ -137,4 +136,4 @@
 
 @media screen and ( max-width: 1260px )
   .works-list
-    grid-gap: 10px
+    grid-gap: 15px

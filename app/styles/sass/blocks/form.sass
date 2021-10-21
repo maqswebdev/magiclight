@@ -10,14 +10,15 @@
       border-bottom: 1px solid $white
       padding: 15px 0
       color: $white
-      font-size: 18px
+      font-size: 16px
       font-weight: 300
       border-radius: 0
       +media-breakpoint-down(md)
-        font-size: 14px
         padding: 15px 0 10px
+      +media-breakpoint-down(sm)
+        font-size: 15px
       +media-breakpoint-down(xs)
-        font-size: 16px
+        font-size: 14px
     &.icon
       input
         padding-right: 40px
@@ -57,6 +58,7 @@
       padding-left: 30px
       cursor: pointer
       margin: 0
+      font-size: 15px
       +media-breakpoint-down(md)
         font-size: 14px
       +media-breakpoint-down(xs)
@@ -82,7 +84,7 @@
         position: absolute
         top: 50%
         transform: translateY(-50%)
-        left: 2px
+        left: 3px
         width: 15px
         height: 15px
         background-image: url(../images/dist/icons/check-solid.svg)

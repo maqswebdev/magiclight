@@ -19,7 +19,7 @@
       font-weight: 700
       text-align: left
       white-space: nowrap
-      padding: 16px 9px 9px
+      padding: 7px 11px 5px
       +media-breakpoint-down(lg)
         text-align: center
         padding: 10px 7px 7px
@@ -40,6 +40,7 @@
         position: relative
         top: -2px
         margin-right: 1px
+        max-width: 15px
   &__content
     position: relative
     background: $white
@@ -49,14 +50,15 @@
     & > div
       height: 100%
     .btn
-      margin-top: 15px
+      width: 80%
+      margin: 10px auto 0
       padding: 12px 0 13px
-      +media-breakpoint-down(lg)
-        margin: 15px auto 0
       +media-breakpoint-down(sm)
         padding: 15px 0
+        width: 100%
       +media-breakpoint-down(xs)
         padding: 12px 0 14px
+        margin-top: 15px
     .video
       position: relative
       display: flex
@@ -65,7 +67,7 @@
       &__cover
         display: block
         position: relative
-        flex: 0 0 290px
+        flex: 0 0 260px
         height: 100%
         +media-breakpoint-down(md)
           flex: 1
@@ -88,7 +90,7 @@
             opacity: 0
         img
           width: 100%
-          min-height: 250px
+          min-height: 200px
           height: 100%
           object-fit: cover
           border-top-left-radius: 20px
@@ -110,14 +112,14 @@
         .title
           text-align: left
           line-height: 1.2
-          margin-bottom: 15px
+          margin-bottom: 10px
         .text
-          min-height: 170px
-          max-height: 170px
+          min-height: 130px
+          max-height: 130px
           overflow: hidden
           +media-breakpoint-down(lg)
-            min-height: 125px
-            max-height: 125px
+            min-height: 115px
+            max-height: 115px
           +media-breakpoint-down(sm)
             min-height: auto
             max-height: 100%
