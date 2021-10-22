@@ -10,53 +10,54 @@
     &::after
       content: ""
       position: absolute
-      bottom: 5px
-      right: -17px
-      width: 20px
-      height: 26px
-      background-image: url(../images/dist/about/about-title-before.png)
-      background-size: contain
-      background-repeat: no-repeat
-      +media-breakpoint-down(lg)
-        top: -4px
-      +media-breakpoint-down(md)
-        width: 16px
-        height: 22px
-        right: -18px
-      +media-breakpoint-down(sm)
-        width: 13px
-        height: 16px
-        right: -15px
-    &::before
-      content: ""
-      position: absolute
-      top: -25px
-      left: -33px
-      width: 66px
-      height: 71px
+      top: -18px
+      left: -26px
+      width: 48px
+      height: 62px
       background-image: url(../images/dist/backlight/backlight-shape1.png)
       background-size: contain
       background-repeat: no-repeat
       +media-breakpoint-down(lg)
-        width: 50px
-        height: 55px
-        top: -20px
+        width: 40px
+        height: 56px
+        top: -14px
         left: -20px
       +media-breakpoint-down(md)
-        width: 45px
-        height: 50px
-        top: -20px
-        left: -27px
+        width: 40px
+        height: 45px
+        top: -18px
+        left: -22px
       +media-breakpoint-down(xs)
-        width: 36px
-        height: 42px
-        top: -17px
-        left: -19px
+        top: -23px
+        width: 35px
+        height: 40px
+    &::before
+      content: ""
+      position: absolute
+      top: 48px
+      right: -15px
+      width: 20px
+      height: 26px
+      background-image: url(../images/dist/backlight/backlight-shape2.png)
+      background-size: contain
+      background-repeat: no-repeat
+      +media-breakpoint-down(lg)
+        width: 17px
+        height: 23px
+        top: 36px
+        right: -16px
+      +media-breakpoint-down(md)
+        right: -13px
+        top: 38px
+      +media-breakpoint-down(xs)
+        top: 20px
   &-slider
     position: relative
-    margin-top: 50px
+    max-width: 80%
+    margin: 50px auto 0
     +media-breakpoint-down(md)
       margin-top: 40px
+      max-width: 100%
     +media-breakpoint-down(xs)
       margin-top: 30px
     &-item

@@ -1,13 +1,13 @@
 .about
   position: relative
   text-align: center
-  padding: 60px 0 80px
   background-image: url(../images/dist/about/about-bg.png)
   background-size: cover
   background-repeat: no-repeat
   background-position: top center
+  padding-bottom: 80px !important
   +media-breakpoint-down(sm)
-    padding: 50px 0 60px
+    padding-bottom: 60px !important
   &__title
     position: relative
     display: inline-block
@@ -16,8 +16,8 @@
       position: absolute
       top: 5px
       right: -22px
-      width: 20px
-      height: 26px
+      width: 16px
+      height: 22px
       background-image: url(../images/dist/about/about-title-before.png)
       background-size: contain
       background-repeat: no-repeat
@@ -34,11 +34,11 @@
     &::before
       content: ""
       position: absolute
-      top: 70px
+      top: 60px
       left: 50%
       transform: translateX(-50%)
-      width: 148px
-      height: 19px
+      width: 110px
+      height: 16px
       background-image: url(../images/dist/about/about-title-after.png)
       background-size: contain
       background-repeat: no-repeat
@@ -60,8 +60,9 @@
   position: relative
   display: grid
   grid-template-columns: repeat(2, 1fr)
-  grid-gap: 50px
-  margin-top: 30px
+  grid-gap: 40px
+  max-width: 80%
+  margin: 40px auto 0
   +media-breakpoint-down(lg)
     grid-gap: 30px
     margin-top: 60px
@@ -70,6 +71,7 @@
   +media-breakpoint-down(sm)
     grid-template-columns: repeat(2, 1fr)
     margin-top: 40px
+    max-width: 100%
   +media-breakpoint-down(xs)
     margin-top: 30px
   &-item
@@ -102,9 +104,10 @@
       border-left: 3px solid $red
       border-right: 3px solid $red
       border-radius: 20px
-      padding: 50px 60px 35px
+      padding: 40px 60px 35px
+      height: 190px
       +media-breakpoint-down(lg)
-        height: 200px
+        height: 180px
         padding: 40px 50px 30px
       +media-breakpoint-down(md)
         height: auto
@@ -134,14 +137,14 @@
         display: block
         color: $red
         font-weight: 900
-        font-size: 60px
+        font-size: 56px
         position: absolute
         top: -45px
         left: 50%
         transform: translateX(-50%)
         +media-breakpoint-down(lg)
-          font-size: 52px
-          top: -40px
+          font-size: 46px
+          top: -35px
         +media-breakpoint-down(sm)
           font-size: 42px
           line-height: 1.2
@@ -150,23 +153,25 @@
           left: unset
           position: relative
         +media-breakpoint-down(xs)
-          font-size: 32px
+          font-size: 28px
       .title
         display: block
         font-weight: 900
-        font-size: 25px
+        font-size: 26px
         line-height: 1.2
         margin-bottom: 10px
         +media-breakpoint-down(lg)
           font-size: 20px
-        +media-breakpoint-down(sm)
+        +media-breakpoint-down(md)
           font-size: 18px
-        +media-breakpoint-down(xs)
+        +media-breakpoint-down(sm)
           font-size: 16px
+        +media-breakpoint-down(xs)
+          font-size: 14px
       .descr
         display: block
-        font-weight: 500
-        font-size: 20px
+        font-weight: 300
+        font-size: 16px
         line-height: 1.2
         +media-breakpoint-down(md)
           font-size: 16px
@@ -178,7 +183,7 @@
     &__icon
       width: 100px
       height: 100px
-      margin: 0 auto 30px
+      margin: 0 auto 40px
       +media-breakpoint-down(lg)
         display: none
       img
@@ -191,12 +196,14 @@
   display: grid
   grid-template-columns: repeat(2, 1fr)
   grid-gap: 20px
-  max-width: 90%
-  margin: 35px auto 0
+  max-width: 80%
+  margin: 60px auto 0
   +media-breakpoint-down(lg)
-    max-width: 100%
+    margin: 30px auto 0
   +media-breakpoint-down(md)
-    margin: 0
+    margin: 0 auto
+  +media-breakpoint-down(sm)
+    max-width: 100%
   +media-breakpoint-down(xs)
     grid-gap: 15px
   &-item
@@ -208,12 +215,11 @@
       padding-left: 0
     +media-breakpoint-down(sm)
       flex-direction: column
-
     &__icon
       position: absolute
       top: 0
       left: 0
-      width: 100px
+      width: 80px
       +media-breakpoint-down(lg)
         display: none
       img
@@ -221,45 +227,50 @@
         height: auto
     &__num
       color: $red
-      font-size: 80px
+      font-size: 56px
       font-weight: 900
       +media-breakpoint-down(lg)
-        font-size: 72px
+        font-size: 46px
       +media-breakpoint-down(md)
         line-height: 1.2
       +media-breakpoint-down(sm)
         font-size: 42px
       +media-breakpoint-down(xs)
-        font-size: 32px
+        font-size: 28px
     &__title
-      font-size: 25px
+      font-size: 21px
       font-weight: 900
       text-align: left
       line-height: 1.2
-      margin-left: 27px
+      margin-left: 20px
       +media-breakpoint-down(lg)
         font-size: 20px
       +media-breakpoint-down(md)
+        font-size: 18px
         margin-left: 15px
       +media-breakpoint-down(sm)
         text-align: center
-        font-size: 18px
+        font-size: 16px
         margin-left: 0
       +media-breakpoint-down(xs)
-        font-size: 15px
+        font-size: 14px
     &:nth-child(1)
       .small-counters-item__icon
-        top: -5px
-        left: 17px
+        top: -17px
+        left: 30px
     &:nth-child(2)
       .small-counters-item__icon
-        top: 27px
-        left: 22px
+        top: 15px
+        left: 40px
     &:nth-child(3)
       .small-counters-item__icon
-        top: 15px
-        left: 25px
+        top: 5px
+        left: 40px
+        img
+          max-width: 80%
     &:nth-child(4)
       .small-counters-item__icon
-        top: 0
-        left: 10px
+        top: -5px
+        left: 30px
+        img
+          max-width: 90%

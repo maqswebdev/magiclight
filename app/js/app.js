@@ -175,10 +175,6 @@ document.addEventListener("DOMContentLoaded", () => {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    /*autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },*/
     breakpoints: {
       576: {
         slidesPerView: 2,
@@ -193,23 +189,26 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const reviewsSlider = new Swiper(".reviews-slider", {
-    slidesPerView: 1,
+    slidesPerView: 2,
     lazy: true,
     loop: false,
-    spaceBetween: 15,
+    spaceBetween: 10,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
       480: {
-        slidesPerView: 2,
+        spaceBetween: 10,
       },
       767: {
+        spaceBetween: 15,
+      },
+      992: {
         slidesPerView: 3,
       },
       1200: {
-        slidesPerView: 4,
+        slidesPerView: 3,
       },
     },
   });
@@ -229,10 +228,10 @@ document.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 15,
       },
       767: {
-        spaceBetween: 30,
+        spaceBetween: 15,
       },
       1200: {
-        spaceBetween: 50,
+        spaceBetween: 20,
       },
     },
   });
