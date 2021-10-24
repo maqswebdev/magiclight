@@ -188,6 +188,29 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
+  const outdoorSlider = new Swiper(".outdoor-slider", {
+    slidesPerView: 1,
+    lazy: true,
+    loop: false,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+    },
+  });
+
   const reviewsSlider = new Swiper(".reviews-slider", {
     slidesPerView: 2,
     lazy: true,
