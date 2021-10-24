@@ -1,15 +1,13 @@
 .advantage
   position: relative
   text-align: center
-  padding: 70px 0 100px
+  padding-bottom: 80px !important
   background-image: url(../images/dist/advantage/advantage-bg.png)
   background-size: cover
   background-position: center center
   background-repeat: no-repeat
   +media-breakpoint-down(lg)
-    padding-bottom: 80px
-  +media-breakpoint-down(xs)
-    padding: 50px 0
+    padding-bottom: 60px !important
   &__title
     position: relative
     display: inline-block
@@ -59,7 +57,12 @@
   &-list
     display: flex
     flex-wrap: wrap
-    margin-top: 50px
+    max-width: 80%
+    margin: 80px auto 0
+    +media-breakpoint-down(md)
+      max-width: 100%
+    +media-breakpoint-down(sm)
+      margin: 40px auto 0
     +media-breakpoint-down(xs)
       margin-top: 40px
   &-item
@@ -85,6 +88,7 @@
       padding: 0 10px
       +media-breakpoint-down(xs)
         display: flex
+        padding: 0
     &__icon
       max-width: 75px
       height: 75px
@@ -92,9 +96,12 @@
       justify-content: center
       align-items: center
       margin: 0 auto
-      +media-breakpoint-down(sm)
+      +media-breakpoint-down(lg)
         max-width: 70px
         height: 70px
+      +media-breakpoint-down(sm)
+        max-width: 60px
+        height: 60px
       +media-breakpoint-down(xs)
         flex: 0 0 50px
         height: 50px
@@ -103,31 +110,28 @@
         max-width: 100%
         height: auto
     &__title
-      font-size: 25px
+      font-size: 20px
       font-weight: 900
       line-height: 1.2
       margin: 15px 0
       +media-breakpoint-down(lg)
-        font-size: 20px
+        font-size: 18px
       +media-breakpoint-down(md)
         margin: 15px 0 10px
       +media-breakpoint-down(sm)
-        font-size: 18px
+        font-size: 15px
       +media-breakpoint-down(xs)
-        font-size: 16px
         margin: 0 0 10px
     &__descr
-      font-size: 20px
+      font-size: 16px
       font-weight: 500
       line-height: 1.2
       +media-breakpoint-down(lg)
-        font-size: 18px
-      +media-breakpoint-down(md)
-        font-size: 16px
-      +media-breakpoint-down(sm)
         font-size: 15px
-      +media-breakpoint-down(xs)
+      +media-breakpoint-down(md)
         font-size: 14px
+      +media-breakpoint-down(sm)
+        font-weight: 300
     &__text
       +media-breakpoint-down(xs)
         text-align: left
@@ -142,16 +146,16 @@
         max-width: 50px
     &__title
       display: inline-block
-      font-size: 35px
-      font-weight: 700
+      font-size: 26px
+      font-weight: 900
       color: $red
       margin-left: 25px
       +media-breakpoint-down(lg)
-        font-size: 32px
+        font-size: 24px
       +media-breakpoint-down(md)
-        font-size: 26px
+        font-size: 22px
         line-height: 1.2
       +media-breakpoint-down(sm)
-        font-size: 22px
+        font-size: 18px
       +media-breakpoint-down(xs)
-        font-size: 20px
+        font-size: 16px
