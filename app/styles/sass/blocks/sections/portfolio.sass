@@ -243,19 +243,51 @@
         margin: 0 -15px 50px
   &-shape-text
     max-width: 480px
-    margin: 30px auto 70px
-    +media-breakpoint-down(lg)
-      max-width: 450px
-    +media-breakpoint-down(md)
-      max-width: 400px
-      margin: 20px auto 50px
-    +media-breakpoint-down(sm)
-      margin: 20px auto 40px
+    margin: 50px auto 50px
+    border-bottom: 3px solid $red
+    border-left: 3px solid $red
+    border-right: 3px solid $red
+    border-radius: 20px
+    position: relative
+    padding: 60px 30px 15px
+    text-align: center
+    font-size: 18px
+    font-weight: 500
     +media-breakpoint-down(xs)
-      max-width: 100%
-    img
-      max-width: 100%
-      height: auto
+      padding: 50px 20px 15px
+    &::after,
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      width: 35%
+      height: 100%
+      border-top: 3px solid $red
+      z-index: 11
+    &::before
+      border-top-left-radius: 20px
+      left: -2px
+    &::after
+      border-top-right-radius: 20px
+      right: -2px
+    &__icon
+      position: absolute
+      top: -50px
+      left: 50%
+      transform: translateX(-50%)
+      +media-breakpoint-down(xs)
+        top: -40px
+      svg
+        fill: $red
+        width: 120px
+        max-height: 100px
+        +media-breakpoint-down(xs)
+          width: 100px
+          max-height: 80px
+    p
+      span
+        font-weight: 600
+        font-size: 24px
   &-btn
     margin-top: 50px
     +media-breakpoint-down(xs)
@@ -304,7 +336,7 @@ h2.portfolio-text__title
   font-size: 20px
   font-weight: 900
   margin: 0 0 30px
-  max-width: 545px
+  text-align: center
   +media-breakpoint-down(lg)
     font-size: 26px
   +media-breakpoint-down(md)

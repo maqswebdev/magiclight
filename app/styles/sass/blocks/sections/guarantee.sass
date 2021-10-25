@@ -23,6 +23,8 @@
       object-fit: cover
   &-text
     padding-left: 0
+    +media-breakpoint-down(md)
+      text-align: center
     +media-breakpoint-down(sm)
       max-width: 540px
       margin: 0 auto
@@ -33,9 +35,8 @@
       +media-breakpoint-down(lg)
         max-width: 600px
       +media-breakpoint-down(md)
-        max-width: 500px
-      +media-breakpoint-down(sm)
         max-width: 100%
+      +media-breakpoint-down(sm)
         margin-bottom: 30px
         text-align: left
       p
@@ -54,6 +55,7 @@
       font-size: 32px
     +media-breakpoint-down(md)
       font-size: 32px
+      text-align: center
     +media-breakpoint-down(sm)
       font-size: 28px
       text-align: left
@@ -77,6 +79,8 @@
       +media-breakpoint-down(md)
         font-size: 40px
         max-width: 60%
+        left: 50%
+        transform: translateX(-50%)
         top: -7px
       +media-breakpoint-down(sm)
         font-size: 36px

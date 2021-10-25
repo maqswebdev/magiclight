@@ -7,9 +7,9 @@
   +media-breakpoint-down(lg)
     padding-top: 114px
   +media-breakpoint-down(md)
-    padding-top: 88px
+    padding-top: 108px
   +media-breakpoint-down(xs)
-    padding-top: 172px
+    padding-top: 196px
   &.bg
     background-image: url(../images/dist/backlight/backlight-bg.png)
     background-size: cover
@@ -379,12 +379,13 @@
   align-items: center
   padding: 7px 30px 10px
   svg
-    width: 50px
-    height: 50px
+    width: 40px
+    height: 35px
+    fill: $white
     +media-breakpoint-down(md)
       width: 40px
     +media-breakpoint-down(xs)
-      width: 35px
+      width: 30px
   span
     display: block
     margin-left: 15px
@@ -462,3 +463,11 @@
       width: 100%
       border-radius: 10px
       object-fit: cover
+
+.hidden-lg
+  display: none
+  +media-breakpoint-down(md)
+    display: block
+.hidden-md
+  +media-breakpoint-down(md)
+    display: none
